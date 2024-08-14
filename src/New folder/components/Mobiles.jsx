@@ -1,5 +1,6 @@
-import React from 'react'
-import { mobileData } from '../data/mobiles'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { mobileData } from '../data/mobiles';
 
 const Mobiles = () => {
     const firstFivemobiles=mobileData.slice(0,5)
@@ -9,9 +10,11 @@ const Mobiles = () => {
     <div className='proSection'>{
         firstFivemobiles.map((item)=>{
           return(
+            <Link to={`/mob/${item.id}`}>
             <div className='imgBox'>
             <img className='proImage' src={item.image}  />
             </div>
+            </Link>
           )
     
         }

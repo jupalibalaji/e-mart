@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { UseCart } from '../context/createcontext'
+
 export const NavBar = () => {
   const {cartItems}=UseCart()
   return (<>
@@ -11,17 +12,16 @@ export const NavBar = () => {
     <div className='search'>
     <input type='text' placeholder='    search..'/>
     </div>
-    <Link to='/cart'>
-    <div>Cart</div>
-    
-    <h4>{cartItems.length}</h4>
-  
-    
-    </Link>
-    
     <div className='user'>
                   Signin/Signup
                   </div>
+    <Link to='/cart'>
+    <div>Cart <span>{cartItems.length}</span>
+    </div>
+    
+    </Link>
+    
+    
            
     
     </div>

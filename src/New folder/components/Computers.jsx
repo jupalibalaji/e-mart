@@ -1,6 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { computerData } from '../data/computers';
-
 
 const Computers = () => {
 
@@ -14,9 +14,11 @@ return (
   
         firstFivecomputers.map((Item) =>  {
             return(
+                <Link to={`/com/${Item.id}`}>
             <div className='imgBox'>
                 <img className='proImage' src={Item.image} alt="computers"/>
-            </div>)
+            </div>
+            </Link>)
         })
 
          }

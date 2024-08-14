@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { watchData } from '../data/watch';
 const Watch = () => {
     const firstFivewatches=watchData.slice(0,5);
@@ -10,9 +11,11 @@ const Watch = () => {
 
     firstFivewatches.map((Item) =>  {
         return(
+          <Link to={`/wat/${Item.id}`}>
         <div className='imgBox'>
             <img className='proImage' src={Item.image} />
-        </div>)
+        </div>
+        </Link>)
     })
 
      }

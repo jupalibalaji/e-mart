@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { womanData } from '../data/woman';
 const Woman = () => {
     const firstFivewomen=womanData.slice(0,5);
@@ -9,10 +10,11 @@ const Woman = () => {
     {
 
     firstFivewomen.map((Item) =>  {
-        return(
+        return(<Link to={`/wom/${Item.id}`}>
         <div className='imgBox'>
             <img className='proImage' src={Item.image} />
-        </div>)
+        </div></Link>
+        )
     })
 
      }
