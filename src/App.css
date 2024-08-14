@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+.NavBarSec{
+  display:flex;
+  justify-content: space-between;
+  background-color: rgba(202, 182, 33, 0.501);
+  color: rgb(16, 16, 238);
+  border: 1px solid rgb(238, 189, 189);
+  padding:10px;
+
+
+}
+.submenu{
+  height: 40px;
+  padding: 20px;
+  background-color: rgb(236, 241, 196);
+ 
+}
+
+.NavBarSec .search input{
+  padding-top: 4px;
+  border-radius: 20px;
+  height: 35px;
+}
+.proSection{
+  background-color:white;
+  display: flex;
+  
+}
+.imgBox{
+  width: 80;
+  padding-left: 20;
+}
+.proImage{
+width: 70%;
+}
+h2{
+  margin: 10px;
+}
+body{
+  background-color: aliceblue;
+}
+
+.submenu ul{
+margin:-10px;
+  
+}
+.submenu ul li{
+  color: rgb(76, 166, 244);
+  display: inline-flex;
+  padding-right: 9%;
+
+}
+.totalimages{
+  display: grid;
+  grid-template-columns: repeat(4,300px);
+  gap: 10px
+  ;
+}
+.imagescont{
+  width: 250px;
+  height: 250px;
+}
+.imagescont img{
+  width:240px;
+  height: 245px;
+}
