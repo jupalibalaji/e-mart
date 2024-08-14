@@ -1,14 +1,17 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { NavBar } from '../components/NavBar';
+import { UseCart } from '../context/createcontext';
 import { furnitureData } from '../data/furniture';
 const Furniturespage = () => {
+  const {AddCartItems,cartItems }= UseCart();
     const {id}=useParams();
     const product=furnitureData.find((item)=>item.id===id);
     
     return (
-    <div>
+      <><NavBar /><div>
         <div className='singimg'>
-          <img src={product.image}/>
+          <img src={product.image} />
         </div>
         <div className='singprice'>
           <h2>${product.price}</h2>
@@ -21,14 +24,14 @@ const Furniturespage = () => {
         </div>
         <div className='singdes'>
           <p>
-          {product.description}
+            {product.description}
           </p>
         </div>
         <div className='addbutton'>
-        <input type='button' value='Add to Cart'/>
+        <button onClick={() => AddCartItems(product)}>Add to Cart</button>
       </div>
-  
-    </div>
+
+      </div></>
     )
 }
 

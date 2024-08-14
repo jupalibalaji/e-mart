@@ -1,14 +1,17 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { NavBar } from '../components/NavBar';
+import { UseCart } from '../context/createcontext';
 import { watchData } from '../data/watch';
 const Watchespage = () => {
+  const {AddCartItems,cartItems }= UseCart();
     const {id}=useParams();
     const product=watchData.find((item)=>item.id===id);
     
     return (
-    <div>
+      <><NavBar /><div>
         <div className='sing-img'>
-          <img src={product.image}/>
+          <img src={product.image} />
         </div>
         <div className='sing-price'>
           <h2>${product.price}</h2>
@@ -21,14 +24,14 @@ const Watchespage = () => {
         </div>
         <div className='sing-des'>
           <p>
-          {product.description}
+            {product.description}
           </p>
         </div>
         <div className='addbutton'>
-        <input type='button' value='Add to Cart'/>
+        <button onClick={() => AddCartItems(product)}>Add to Cart</button>
       </div>
-  
-    </div>
+
+      </div></>
     )
 }
 
