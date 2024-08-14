@@ -9,7 +9,9 @@ export const NavBar = () => {
     <div className='search'>
     <input type='text' placeholder='    search..'/>
     </div>
+    <Link to='{/cart}'>
     <div>Cart</div>
+    </Link>
     <div className='user'>
                   Signin/Signup
                   </div>

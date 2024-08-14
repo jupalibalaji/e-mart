@@ -11,6 +11,7 @@ import Mobilespage from "./New folder/pages/mobilespage";
 import Watchpage from "./New folder/pages/Watchpage";
 import Womenpage from "./New folder/pages/Womenpage";
 import ACspage from "./New folder/singlepages/ACspage";
+import Cartpage from "./New folder/singlepages/cartpage";
 import Computersspage from "./New folder/singlepages/Computersspage";
 import Furniturespage from "./New folder/singlepages/Furniturespage";
 import Menspage from "./New folder/singlepages/Menspage";
@@ -42,6 +43,7 @@ const App = () => {
      <Route path='/men/:id' element={<Menspage/>}/>
       <Route path='/wat/:id' element={<Watchespage/>}/>
      <Route path='/wom/:id' element={<Womenspage/>}/>
+     <Route path='/cart' element={<Cartpage/>}/>
      </Routes>
     </>
     )

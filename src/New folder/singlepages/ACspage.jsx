@@ -24,6 +24,7 @@ const ACspage = () => {
           {product.description}
           </p>
         </div>
+       
         <div className='addbutton'>
         <input type='button' value='Add to Cart'/>
       </div>
